@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package hello;
+
+import "google/protobuf/empty.proto";
+
+message String { string value = 1; }
+
+service Songs {
+  rpc SayHello(google.protobuf.Empty) returns (String) {};
+  rpc SayHelloWithName(String) returns (String) {};
+}
