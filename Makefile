@@ -10,4 +10,7 @@ g:
     proto/*.proto
 
 c:
-	rm -rf ${PROTO_DEST}
+	rm ${PROTO_DEST}/*.js && rm ${PROTO_DEST}/*.ts
+
+r:
+	PORT=6789 node ./dist/index.js

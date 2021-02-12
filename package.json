@@ -1,29 +1,24 @@
 {
-  "name": "gprc-ts-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "yarn run eslint --fix --ext .ts src",
-    "prebuild": "yarn run lint",
-    "clean": "rm -rf ./src/proto && mkdir -p ./src/proto && rm -f chat-*.txt && rm -f db.json",
-    "build": "sh ./scripts/build-protos.sh ./songs.proto ./src/proto && yarn run tsc",
-    "start": "PORT=6789 node ./dist/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sidgeek/gprc-ts-test.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sidgeek/gprc-ts-test/issues"
-  },
-  "homepage": "https://github.com/sidgeek/gprc-ts-test#readme",
-  "dependencies": {
-    "grpc": "^1.24.5",
-    "grpc-tools": "^1.10.0",
-    "grpc_tools_node_protoc_ts": "^5.1.1"
-  }
+    "name": "grpc-ts-demo",
+    "version": "1.0.0",
+    "author": "Mike Christensen",
+    "license": "MIT",
+    "dependencies": {
+        "@grpc/grpc-js": "^1.2.2",
+        "@types/yargs": "^15.0.3",
+        "@typescript-eslint/eslint-plugin": "^2.19.0",
+        "@typescript-eslint/parser": "^2.19.0",
+        "eslint": "^6.8.0",
+        "grpc-tools": "^1.10.0",
+        "grpc_tools_node_protoc_ts": "^5.0.1",
+        "typescript": "^4.1.2",
+        "yargs": "^15.1.0"
+    },
+    "scripts": {
+        "lint": "yarn run eslint --fix --ext .ts src",
+        "prebuild": "yarn run lint",
+        "clean": "rm -rf ./src/proto && mkdir -p ./src/proto && rm -f chat-*.txt && rm -f db.json",
+        "build": "sh ./scripts/build-protos.sh ./songs.proto ./src/proto && yarn run tsc",
+        "start": "PORT=6789 node ./dist/index.js"
+    }
 }

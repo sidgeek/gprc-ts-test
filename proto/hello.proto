@@ -1,12 +1,11 @@
 syntax = "proto3";
 
-package hello;
+package proto;
 
-import "google/protobuf/empty.proto";
+// import "google/protobuf/empty.proto";
 
-message String { string value = 1; }
+message MyString { string value = 1; }
 
-service Songs {
-  rpc SayHello(google.protobuf.Empty) returns (String) {};
-  rpc SayHelloWithName(String) returns (String) {};
+service Hello {
+  rpc SayHello(MyString) returns (MyString) {};
 }
